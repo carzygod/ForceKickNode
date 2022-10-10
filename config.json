@@ -1,6 +1,6 @@
 {
     "chainId":5,
-    "provider":"https://rpc.slock.it/goerli",
+    "provider":"https://eth-goerli.alchemyapi.io/v2/ns6GS7Ng0AaZuEIzmeHAWll8CfE6QQoi",
     "privateKey":"",
     "publicKey":"",
     "tokens":[

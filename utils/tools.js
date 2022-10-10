@@ -17,6 +17,9 @@ function sleep (ms) {
 }
 
 function getHex (data){
+    return web3.utils.toHex(data)
+}
+function getHexByte (data){
     return web3.utils.hexToBytes(web3.utils.toHex(data))
 }
 module.exports = {
@@ -24,4 +27,5 @@ module.exports = {
     sleep,
     getHex,
     getTokenName,
+    getHexByte
 }
