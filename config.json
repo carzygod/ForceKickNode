@@ -1,0 +1,9 @@
+{
+    "chainId":5,
+    "provider":"https://rpc.slock.it/goerli",
+    "privateKey":"",
+    "publicKey":"",
+    "tokens":[
+        0
+    ]
+}
