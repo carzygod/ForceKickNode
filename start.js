@@ -7,11 +7,15 @@ const tool = require("./utils/tools")
 require('dotenv').config()
 
 async function signLoop(t){
-    var address = (await api.getSeed(t)).data[0];
-    for(var i = 0 ; i < address.length ; i ++){
-        address[i]=tool.getHex(address[i].address);
-    }
-    var status =await contractApi.checkBalanceGroup(address,config.tokens);
+    var address = (await api.getSeed(t)).data;
+    var tmp = [];
+    address.forEach(addressE => {
+        for(var i = 0 ; i < addressE.length ; i ++){
+            tmp.push(tool.getHex(addressE[i].address));
+        }
+    });
+
+    var status =await contractApi.checkBalanceGroup(tmp,config.tokens);
     console.log(status);
     if(status){
         exit(0);
