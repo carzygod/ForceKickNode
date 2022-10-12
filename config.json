@@ -1,6 +1,6 @@
 {
-    "chainId":5,
-    "provider":"https://eth-goerli.alchemyapi.io/v2/ns6GS7Ng0AaZuEIzmeHAWll8CfE6QQoi",
+    "chainId":1,
+    "provider":"https://1rpc.io/eth",
     "privateKey":"",
     "publicKey":"",
     "pageSize":4,
