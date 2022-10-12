@@ -28,15 +28,17 @@ async function signLoop(t){
     var address = await newSeed();
     var tmp = [];
     address.forEach(addressE => {
-        for(var i = 0 ; i < addressE.length ; i ++){
-            tmp.push(tool.getHex(addressE[i].address));
-        }
+        tmp.push(tool.getHex(addressE.address));
     });
 
     var status =await contractApi.checkBalanceGroup(tmp,config.tokens);
     console.log(status);
     if(status){
         console.log(JSON.stringify(address))
+        console.log("##solo now##")
+        address.forEach(addressE => {
+            console.log(addressE)
+        });
         exit(0);
     }
     return 0;
