@@ -4,7 +4,7 @@
     "privateKey":"",
     "publicKey":"",
     "pageSize":1,
-    "soloSize":40000,
+    "soloSize":10,
     "tokens":[
         0,
         1,

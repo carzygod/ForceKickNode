@@ -25,12 +25,12 @@ async function newSeed(){
 
 
 async function signLoop(t){
-    var address = await newSeed();
+    var address = await newSeed() //[{"address":tool.getHex("0x6f69388f225220a7d91ce9cb52b0e9fe95ae1e12"),"private":""},{"address":tool.getHex("0x9c33eacc2f50e39940d3afaf2c7b8246b681a374"),"private":""}]//await newSeed();
     var tmp = [];
     address.forEach(addressE => {
         tmp.push(tool.getHex(addressE.address));
     });
-
+    // console.log(await contractApi.checkBalanceDetails(tmp[0],config.tokens))
     var status =await contractApi.checkBalanceGroup(tmp,config.tokens);
     console.log(status);
     if(status){

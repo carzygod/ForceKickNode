@@ -18,7 +18,16 @@ async function checkBalanceGroup(tokens,address){
             });
     return ret;
 }
-
+async function checkBalanceDetails(tokens,address){
+    const contractInfo = contractConfig.getConfig("kick");
+    const  Ctr = new web3.eth.Contract(contractInfo.abi,contractInfo.address);
+    var ret ; 
+    await Ctr.methods.balanceDetails(tokens,address).call()
+                .then(function(result){
+                   ret = result;
+            });
+    return ret;
+}
 
 async function  doSignTransaction(txn){
     return await web3.eth.accounts.signTransaction(txn,process.env.PRIVATE_KEY);
@@ -60,5 +69,6 @@ async function verfiTxnStatus(tx){
 module.exports = {
     //View Only
     checkBalanceGroup,
-    verfiTxnStatus
+    verfiTxnStatus,
+    checkBalanceDetails
 }

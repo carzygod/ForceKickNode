@@ -4,7 +4,7 @@ const kickAbi = require("./kick.json")
 require('dotenv').config()
 const abiConfig ={
     "kick":{
-        "address":"0x744ca087D2Ed7ab3c125e9F0EA864De9B19e51F9",
+        "address":"0x4181418DDEfa8C9935bf0066B9C161605e30Ba7F",
         "abi":kickAbi
     },
     "Erc20":{
